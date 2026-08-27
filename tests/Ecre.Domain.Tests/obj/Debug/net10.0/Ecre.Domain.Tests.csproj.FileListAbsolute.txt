@@ -92,6 +92,7 @@
 /Users/josegabrielestrella/ecre/tests/Ecre.Domain.Tests/obj/Debug/net10.0/Ecre.Domain.Tests.AssemblyInfoInputs.cache
 /Users/josegabrielestrella/ecre/tests/Ecre.Domain.Tests/obj/Debug/net10.0/Ecre.Domain.Tests.AssemblyInfo.cs
 /Users/josegabrielestrella/ecre/tests/Ecre.Domain.Tests/obj/Debug/net10.0/Ecre.Domain.Tests.csproj.CoreCompileInputs.cache
+/Users/josegabrielestrella/ecre/tests/Ecre.Domain.Tests/obj/Debug/net10.0/Ecre.Domain.Tests.sourcelink.json
 /Users/josegabrielestrella/ecre/tests/Ecre.Domain.Tests/obj/Debug/net10.0/Ecre.Dom.260C7980.Up2Date
 /Users/josegabrielestrella/ecre/tests/Ecre.Domain.Tests/obj/Debug/net10.0/Ecre.Domain.Tests.dll
 /Users/josegabrielestrella/ecre/tests/Ecre.Domain.Tests/obj/Debug/net10.0/refint/Ecre.Domain.Tests.dll

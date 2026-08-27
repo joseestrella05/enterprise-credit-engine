@@ -87,6 +87,7 @@
 /Users/josegabrielestrella/ecre/tests/Ecre.IntegrationTests/obj/Debug/net10.0/Ecre.IntegrationTests.AssemblyInfoInputs.cache
 /Users/josegabrielestrella/ecre/tests/Ecre.IntegrationTests/obj/Debug/net10.0/Ecre.IntegrationTests.AssemblyInfo.cs
 /Users/josegabrielestrella/ecre/tests/Ecre.IntegrationTests/obj/Debug/net10.0/Ecre.IntegrationTests.csproj.CoreCompileInputs.cache
+/Users/josegabrielestrella/ecre/tests/Ecre.IntegrationTests/obj/Debug/net10.0/Ecre.IntegrationTests.sourcelink.json
 /Users/josegabrielestrella/ecre/tests/Ecre.IntegrationTests/obj/Debug/net10.0/Ecre.Int.B1E4E48F.Up2Date
 /Users/josegabrielestrella/ecre/tests/Ecre.IntegrationTests/obj/Debug/net10.0/Ecre.IntegrationTests.dll
 /Users/josegabrielestrella/ecre/tests/Ecre.IntegrationTests/obj/Debug/net10.0/refint/Ecre.IntegrationTests.dll

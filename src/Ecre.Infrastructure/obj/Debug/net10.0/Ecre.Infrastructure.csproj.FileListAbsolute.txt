@@ -10,6 +10,7 @@
 /Users/josegabrielestrella/ecre/src/Ecre.Infrastructure/obj/Debug/net10.0/Ecre.Infrastructure.AssemblyInfoInputs.cache
 /Users/josegabrielestrella/ecre/src/Ecre.Infrastructure/obj/Debug/net10.0/Ecre.Infrastructure.AssemblyInfo.cs
 /Users/josegabrielestrella/ecre/src/Ecre.Infrastructure/obj/Debug/net10.0/Ecre.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/josegabrielestrella/ecre/src/Ecre.Infrastructure/obj/Debug/net10.0/Ecre.Infrastructure.sourcelink.json
 /Users/josegabrielestrella/ecre/src/Ecre.Infrastructure/obj/Debug/net10.0/Ecre.Inf.2533B3A2.Up2Date
 /Users/josegabrielestrella/ecre/src/Ecre.Infrastructure/obj/Debug/net10.0/Ecre.Infrastructure.dll
 /Users/josegabrielestrella/ecre/src/Ecre.Infrastructure/obj/Debug/net10.0/refint/Ecre.Infrastructure.dll

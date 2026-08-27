@@ -34,8 +34,15 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
+          ],
+          "warnNotAsError": [
+            "NU1901",
+            "NU1902",
+            "NU1903",
+            "NU1904"
           ]
         },
         "restoreAuditProperties": {
@@ -49,9 +56,9 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[10.0.6, )"
+              "version": "[6.6.2, )"
             }
           },
           "imports": [
@@ -521,8 +528,15 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
+          ],
+          "warnNotAsError": [
+            "NU1901",
+            "NU1902",
+            "NU1903",
+            "NU1904"
           ]
         },
         "restoreAuditProperties": {
@@ -855,8 +869,15 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
+          ],
+          "warnNotAsError": [
+            "NU1901",
+            "NU1902",
+            "NU1903",
+            "NU1904"
           ]
         },
         "restoreAuditProperties": {
@@ -1193,8 +1214,15 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
+          ],
+          "warnNotAsError": [
+            "NU1901",
+            "NU1902",
+            "NU1903",
+            "NU1904"
           ]
         },
         "restoreAuditProperties": {
