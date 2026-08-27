@@ -1,0 +1,6 @@
+@Ecre.Api_HostAddress = http://localhost:5258
+
+GET {{Ecre.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

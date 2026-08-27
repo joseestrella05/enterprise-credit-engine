@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Ecre.Api/Ecre.Api.csproj" />
+    <Project Path="src/Ecre.Application/Ecre.Application.csproj" />
+    <Project Path="src/Ecre.Domain/Ecre.Domain.csproj" />
+    <Project Path="src/Ecre.Infrastructure/Ecre.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Ecre.Application.Tests/Ecre.Application.Tests.csproj" />
+    <Project Path="tests/Ecre.Domain.Tests/Ecre.Domain.Tests.csproj" />
+    <Project Path="tests/Ecre.IntegrationTests/Ecre.IntegrationTests.csproj" />
+  </Folder>
+</Solution>
