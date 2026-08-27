@@ -51,4 +51,65 @@ public class LoanStateMachineTests
         LoanStateMachine.IsTerminal(LoanStatus.FullyPaid).Should().BeTrue();
         LoanStateMachine.IsTerminal(LoanStatus.Defaulted).Should().BeTrue();
     }
+
+    [Fact]
+    public void TodoEstadoDelEnum_EstaDeclaradoEnLaMaquina()
+    {
+        // Guarda contra el olvido: agregar al enum sin agregar al mapa rompe la suite.
+        foreach (LoanStatus status in Enum.GetValues<LoanStatus>())
+        {
+            var accion = () => LoanStateMachine.AllowedTargets(status);
+            accion.Should().NotThrow($"'{status}' debe tener transiciones declaradas");
+        }
+    }
+
+    [Fact]
+    public void Rechazo_SoloDesdeUnderReview()
+    {
+        var loan = NewDraft();
+        var desdeDraft = () => loan.Reject("Sin capacidad de pago");
+        desdeDraft.Should().Throw<DomainException>().WithMessage("*Draft → Rejected*");
+
+        loan.SubmitForReview();
+        loan.Reject("Sin capacidad de pago");
+
+        loan.Status.Should().Be(LoanStatus.Rejected);
+        loan.ClosingReason.Should().Be("Sin capacidad de pago");
+        LoanStateMachine.IsTerminal(LoanStatus.Rejected).Should().BeTrue();
+    }
+
+    [Fact]
+    public void Cancelacion_PermitidaDesdeDraftYApproved()
+    {
+        var borrador = NewDraft();
+        borrador.Cancel("Cliente desistió");
+        borrador.Status.Should().Be(LoanStatus.Cancelled);
+
+        var aprobado = NewDraft();
+        aprobado.SubmitForReview();
+        aprobado.Approve();
+        aprobado.Cancel("Cliente consiguió mejor tasa");
+        aprobado.Status.Should().Be(LoanStatus.Cancelled);
+    }
+
+    [Fact]
+    public void Cancelacion_ImposibleTrasDesembolso()
+    {
+        var loan = NewDraft();
+        loan.SubmitForReview();
+        loan.Approve();
+        loan.Disburse(new DateOnly(2025, 12, 31), new DateOnly(2026, 1, 31));
+
+        var accion = () => loan.Cancel("Quiero devolver el dinero");
+
+        accion.Should().Throw<DomainException>().WithMessage("*Disbursed → Cancelled*");
+    }
+
+    [Fact]
+    public void CierreSinJustificacion_EsRechazado()
+    {
+        var loan = NewDraft();
+        var accion = () => loan.Cancel("   ");
+        accion.Should().Throw<DomainException>().WithMessage("*justificación*");
+    }
 }

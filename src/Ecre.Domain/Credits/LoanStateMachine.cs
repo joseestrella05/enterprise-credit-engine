@@ -4,14 +4,18 @@ namespace Ecre.Domain.Credits;
 
 public static class LoanStateMachine
 {
-    private static readonly IReadOnlyDictionary<LoanStatus, LoanStatus[]> Allowed =
+        private static readonly IReadOnlyDictionary<LoanStatus, LoanStatus[]> Allowed =
         new Dictionary<LoanStatus, LoanStatus[]>
         {
-            [LoanStatus.Draft]       = new[] { LoanStatus.UnderReview },
-            [LoanStatus.UnderReview] = new[] { LoanStatus.Approved },
-            [LoanStatus.Approved]    = new[] { LoanStatus.Disbursed },
+            
+            [LoanStatus.Draft]       = new[] { LoanStatus.UnderReview, LoanStatus.Cancelled },
+            [LoanStatus.UnderReview] = new[] { LoanStatus.Approved,    LoanStatus.Rejected  },
+            [LoanStatus.Approved]    = new[] { LoanStatus.Disbursed,   LoanStatus.Cancelled },
+
             [LoanStatus.Disbursed]   = new[] { LoanStatus.Active },
             [LoanStatus.Active]      = new[] { LoanStatus.FullyPaid, LoanStatus.Defaulted },
+
+        
             [LoanStatus.FullyPaid]   = Array.Empty<LoanStatus>(),
             [LoanStatus.Defaulted]   = Array.Empty<LoanStatus>(),
             [LoanStatus.Rejected]    = Array.Empty<LoanStatus>(),
@@ -43,6 +47,8 @@ public static class LoanStateMachine
         throw new DomainException(
             $"Transición inválida: {from} → {to}. Destinos permitidos desde {from}: {permitidos}.");
     }
+
+    
 
     public static bool AmountsAreFrozen(LoanStatus status)
         => status is not (LoanStatus.Draft or LoanStatus.UnderReview);
