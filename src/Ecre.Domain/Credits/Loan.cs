@@ -17,6 +17,7 @@ public sealed class Loan
     public LoanStatus Status { get; private set; }
     public DateOnly? DisbursedOn { get; private set; }
     public uint RowVersion { get; private set; }   // RNF-03, se cablea en Fase 4
+    public string? ClosingReason { get; private set; }
 
     public IReadOnlyList<Installment> Installments => _installments.AsReadOnly();
     public Currency Currency => Principal.Currency;
@@ -96,5 +97,26 @@ public sealed class Loan
     {
         LoanStateMachine.EnsureTransition(Status, target);
         Status = target;
+    }
+
+    public void Reject(string reason)
+    {
+        RequireReason(reason, nameof(Reject));
+        TransitionTo(LoanStatus.Rejected);
+        ClosingReason = reason.Trim();
+    }   
+
+
+    public void Cancel(string reason)
+    {
+        RequireReason(reason, nameof(Cancel));
+        TransitionTo(LoanStatus.Cancelled);
+        ClosingReason = reason.Trim();
+    }
+
+    private static void RequireReason(string reason, string operation)
+    {
+        if (string.IsNullOrWhiteSpace(reason))
+            throw new DomainException($"La operación {operation} exige una justificación registrada.");
     }
 }

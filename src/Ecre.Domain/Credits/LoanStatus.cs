@@ -8,5 +8,7 @@ public enum LoanStatus
     Disbursed   = 3,
     Active      = 4,
     FullyPaid   = 5,
-    Defaulted   = 6
+    Defaulted   = 6,
+    Rejected    = 7,
+    Cancelled   = 8
 }
