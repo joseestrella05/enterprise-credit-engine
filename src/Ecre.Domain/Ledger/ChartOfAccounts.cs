@@ -1,4 +1,3 @@
-// src/Ecre.Domain/Ledger/ChartOfAccounts.cs
 using Ecre.Domain.Common;
 
 namespace Ecre.Domain.Ledger;
