@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ecre.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bfd636032fb53fd9e6844fcaa7925746780e8118")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+450be8af0c7b3765ae1fb4ffa400c05d11467f92")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ecre.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ecre.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
