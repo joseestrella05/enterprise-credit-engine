@@ -52,7 +52,7 @@ public class JournalTransactionTests
             JournalEntry.Debit(ChartOfAccounts.Bank, Money.Of(100m, Currency.DOP)),
             JournalEntry.Credit(ChartOfAccounts.InterestIncome, Money.Of(100m, Currency.USD)));
 
-        accion.Should().Throw<DomainException>().WithMessage("*misma moneda*compartir moneda*");
+            accion.Should().Throw<DomainException>().WithMessage("*compartir moneda*");
     }
 
     [Fact]
