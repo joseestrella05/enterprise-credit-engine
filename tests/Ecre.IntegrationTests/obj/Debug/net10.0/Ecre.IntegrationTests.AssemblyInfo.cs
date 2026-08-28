@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ecre.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f410b0d3e61156ee6635731333ab4c749a18bd5b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f52b2a1ca4f1b0e3d6efe56d34ba48fb8f93d0bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ecre.IntegrationTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ecre.IntegrationTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

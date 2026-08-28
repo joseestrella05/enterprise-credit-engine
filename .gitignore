@@ -496,3 +496,9 @@ bin/
 obj/
 *.user
 .vs/
+
+# Build artifacts
+bin/
+obj/
+*.user
+.vs/

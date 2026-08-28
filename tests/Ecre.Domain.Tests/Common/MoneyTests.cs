@@ -1,5 +1,5 @@
 using Ecre.Domain.Common;
-using FluentAssertions;
+using AwesomeAssertions;
 
 namespace Ecre.Domain.Tests.Common;
 

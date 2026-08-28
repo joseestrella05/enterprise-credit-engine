@@ -50,6 +50,13 @@ public sealed class Installment
 
     public bool IsSettled => OutstandingTotal.IsZero;
 
+    /// Cuota contractual (capital + interés corriente), sin mora.
+    public Money ScheduledTotal => ScheduledPrincipal + ScheduledInterest;
+
+    /// True si ya recibió alguna imputación; el recálculo por prepago la respeta.
+    public bool HasPayments
+        => PaidPrincipal.IsPositive || PaidInterest.IsPositive || PaidLateInterest.IsPositive;
+
     /// RF-04: devenga mora sobre el capital vencido de ESTA cuota.
     /// Idempotente por fecha: llamarlo dos veces el mismo día no duplica.
     internal Money AccrueLateInterest(LatePolicy policy, DateOnly asOf)
@@ -104,10 +111,16 @@ public sealed class Installment
             Status = algoPagado ? InstallmentStatus.PartiallyPaid : InstallmentStatus.Pending;
     }
 
-    /// Usado por el recálculo tras pago extraordinario con reducción de plazo.
+    /// Usado por el recálculo tras pago extraordinario. Sólo se invoca sobre
+    /// cuotas futuras sin imputaciones previas, para no falsear lo ya pagado.
     internal void Rewrite(Money principal, Money interest)
     {
+        if (principal.IsNegative || interest.IsNegative)
+            throw new DomainException(
+                $"Recálculo inválido para la cuota {Number}: capital {principal}, interés {interest}.");
+
         ScheduledPrincipal = principal;
         ScheduledInterest = interest;
+        RefreshStatus();
     }
 }

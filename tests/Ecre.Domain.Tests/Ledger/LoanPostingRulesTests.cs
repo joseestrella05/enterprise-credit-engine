@@ -1,7 +1,7 @@
 using Ecre.Domain.Common;
 using Ecre.Domain.Credits;
 using Ecre.Domain.Ledger;
-using FluentAssertions;
+using AwesomeAssertions;
 
 namespace Ecre.Domain.Tests.Ledger;
 

@@ -1,7 +1,7 @@
 // tests/Ecre.Domain.Tests/Ledger/JournalTransactionTests.cs
 using Ecre.Domain.Common;
 using Ecre.Domain.Ledger;
-using FluentAssertions;   
+using AwesomeAssertions;
 
 namespace Ecre.Domain.Tests.Ledger;
 

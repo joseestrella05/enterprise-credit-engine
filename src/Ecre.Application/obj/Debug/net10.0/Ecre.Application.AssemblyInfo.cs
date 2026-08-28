@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ecre.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f410b0d3e61156ee6635731333ab4c749a18bd5b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bccf59dfc655fb93ffff559a4d3ed1728cce88e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ecre.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ecre.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
