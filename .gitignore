@@ -484,3 +484,15 @@ $RECYCLE.BIN/
 **/bin/
 **/obj/
 .DS_Store
+
+# Build artifacts
+bin/
+obj/
+*.user
+.vs/
+
+# Build artifacts
+bin/
+obj/
+*.user
+.vs/
